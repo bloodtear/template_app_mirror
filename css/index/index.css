@@ -1,0 +1,12 @@
+.chat_room_div {
+  border: 1px solid;
+  width: 100%;
+  margin-bottom: 100px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.input_div {
+  position: fixed;
+  bottom: 60px;
+}

@@ -1,0 +1,31 @@
+body {
+  !background-color: #f8f8f8;
+}
+
+.box_line{
+  display: inline-flex;
+}
+
+.box{
+  display: flex;
+}
+
+.item {
+  flex-grow: 1; /* default 0 */
+}
+
+.footer_div {
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  background-color: red;
+  width: 100%;
+  color: white;
+}
+
+.footer_item {
+
+  justify-content: center;
+align-items:center;
+}
+

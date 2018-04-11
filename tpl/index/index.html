@@ -1,0 +1,29 @@
+<div>
+<?php
+
+$history_show = '';
+if (!empty($chat_list_history)) {
+  foreach ($chat_list_history as $chat_line) {
+    $chat_msg = json_decode($chat_line);
+    $msg = $chat_msg->data;
+    $history_show .= "<div>$msg</div>";
+  }
+}
+
+
+?>
+<div class='chat_room_div'>
+  {:$history_show}
+
+</div>
+<div class='input_div'>
+  <input class='chat_input' type='text' />
+  <button id='chat_send' class='btn btn-success'>发送</button>
+</div>
+
+
+
+
+
+
+</div>
