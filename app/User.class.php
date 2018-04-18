@@ -17,7 +17,7 @@ class User {
   }
 
   public static function get_one($username, $password) {
-    $data = database\Db_user::instance()->one_by_name_pwd($username, $password);
+    $data = database\Db_user::inst()->one_by_name_pwd($username, $password);
     if (empty($data)) {
       return false;
     }
@@ -25,7 +25,7 @@ class User {
   }
 
   public static function create($username, $password) {
-    $ret = database\Db_user::instance()->add($username, $password);
+    $ret = database\Db_user::inst()->add($username, $password);
     if (empty($ret)) {
       return false;
     }
@@ -34,7 +34,7 @@ class User {
 
 
   public static function check_one($username) {
-    $data = database\Db_user::instance()->one_by_username($username);
+    $data = database\Db_user::inst()->one_by_username($username);
     if (empty($data)) {
       return false;
     }

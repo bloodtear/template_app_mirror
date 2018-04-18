@@ -6,12 +6,16 @@ class Db_user extends \framework\Database\Database_table {
 
   public static $instance;
 
-  public static function instance (){
+  public static function inst (){
     if (empty(self::$instance)) {
-      self::$instance = new Db_user(DB_USER);
+      self::$instance = new Db_user();
     }
     return self::$instance;
   }
+  
+    protected function __construct() {
+        parent::__construct("app_user");
+    }
 
 
 
